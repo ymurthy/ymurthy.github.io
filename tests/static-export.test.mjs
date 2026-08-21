@@ -54,6 +54,11 @@ test("home page contains the requested current information", async () => {
   assert.match(html, /Reinforcement learning for stochastic systems and networks/);
   assert.match(html, /Robust, risk-sensitive, and multi-agent decision-making/);
   assert.match(html, /Non-asymptotic analysis/);
+  assert.match(
+    html,
+    /<img src="\/assets\/images\/yashaswini-murthy\.jpg"/,
+  );
+  assert.doesNotMatch(html, /\/_vinext\/image/);
   assert.doesNotMatch(html, /finite-time theory/i);
   assert.doesNotMatch(html, /Compare fonts/);
   assert.match(html, />Teaching</);

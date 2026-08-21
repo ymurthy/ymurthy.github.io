@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ProfileLinks } from "./components/profile-links";
 import { PublicationList } from "./components/publication-list";
 import { selectedPublications } from "./data/publications";
@@ -67,13 +66,16 @@ export default function Home() {
           </div>
           <figure className="hero__portrait">
             <div className="hero__portrait-frame">
-              <Image
+              {/* GitHub Pages cannot serve Vinext's runtime image optimizer. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/assets/images/yashaswini-murthy.jpg"
                 alt="Yashaswini Murthy smiling outdoors"
                 width={1600}
                 height={1329}
-                priority
-                sizes="(max-width: 680px) 285px, (max-width: 800px) 260px, 310px"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
             <ProfileLinks />
