@@ -25,11 +25,6 @@ and is published at [https://ymurthy.github.io](https://ymurthy.github.io).
 - Colors and layout: `app/globals.css`
 - Portrait and documents: `public/assets/`
 
-Edits committed to `main` automatically run
-`.github/workflows/build-static-site.yml`, which rebuilds the generated site
-files served by GitHub Pages. The generated file list is recorded in
-`.site-output-manifest`.
-
 ## Run locally
 
 Use Node.js 22.13 or newer.
@@ -41,13 +36,16 @@ npm run dev
 
 Then open the local URL printed by the development server.
 
-## Production build
+## Production build and publishing
 
 ```bash
 npm run build
 ```
 
-The static website is generated in `dist/client/`.
+The static website is generated in `dist/client/`. GitHub Pages serves the
+generated static files committed at the repository root. After changing the
+source, rebuild the site and update those root files before pushing to `main`.
+The current generated file list is recorded in `.site-output-manifest`.
 
 ## Authentication
 
