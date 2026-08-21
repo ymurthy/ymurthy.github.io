@@ -1,0 +1,60 @@
+name: Deploy website to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Restore thesis PDF assets
+        run: |
+          mkdir -p public/assets/files
+          cat .github/large-assets/Yashaswini-Murthy-PhD-Thesis.pdf.part* > public/assets/files/Yashaswini-Murthy-PhD-Thesis.pdf
+          cat .github/large-assets/Yashaswini-Murthy-Masters-Thesis.pdf.part* > public/assets/files/Yashaswini-Murthy-Masters-Thesis.pdf
+          echo "00216196e1a10248a19a2636e6d68f237b2476677cc18bb79b4aa31b32f61d87  public/assets/files/Yashaswini-Murthy-PhD-Thesis.pdf" | sha256sum -c -
+          echo "f5b621529859249e93b1ae55f03ebcc4646732ce9d20304772e4c71ce72f78dd  public/assets/files/Yashaswini-Murthy-Masters-Thesis.pdf" | sha256sum -c -
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.13.0
+          cache: npm
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static website
+        run: npm run build
+
+      - name: Disable Jekyll processing
+        run: touch dist/client/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/client
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
