@@ -3,10 +3,9 @@
 Personal academic website for Yashaswini Murthy, Assistant Professor in
 Operations Research at The University of Texas at Austin.
 
-The design follows a research-first, single-column academic layout and uses UT
-Austin's official burnt orange (`#BF5700`), white, charcoal, and limestone
-palette. The site is built with Next.js App Router through Vinext and exports to
-static files for GitHub Pages.
+The design uses UT Austin's official burnt orange (`#BF5700`), white, charcoal,
+and limestone palette. The site is built with Next.js App Router through Vinext
+and is published at [https://ymurthy.github.io](https://ymurthy.github.io).
 
 ## Pages
 
@@ -26,6 +25,11 @@ static files for GitHub Pages.
 - Colors and layout: `app/globals.css`
 - Portrait and documents: `public/assets/`
 
+Edits committed to `main` automatically run
+`.github/workflows/build-static-site.yml`, which rebuilds the generated site
+files served by GitHub Pages. The generated file list is recorded in
+`.site-output-manifest`.
+
 ## Run locally
 
 Use Node.js 22.13 or newer.
@@ -43,16 +47,11 @@ Then open the local URL printed by the development server.
 npm run build
 ```
 
-The static GitHub Pages artifact is generated in `dist/client/`.
+The static website is generated in `dist/client/`.
 
-## Publish with GitHub Pages
-
-This repository includes `.github/workflows/deploy-pages.yml`. Push it to the
-`main` branch of the `ymurthy.github.io` repository. In GitHub, open **Settings
-→ Pages** and set **Source** to **GitHub Actions** if it is not selected already.
-Each later push to `main` will rebuild and deploy the site automatically.
+## Authentication
 
 No SSH key is required when changes are made through GitHub's web interface or
 an authenticated GitHub integration. For command-line pushes from a new
-computer, use either GitHub CLI authentication or an SSH key configured on that
+computer, use GitHub CLI authentication or an SSH key configured on that
 computer.
