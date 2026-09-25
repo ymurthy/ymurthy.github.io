@@ -91,6 +91,15 @@ export const conferencePublications: Publication[] = [
     href: "https://ieeexplore.ieee.org/abstract/document/10383691",
   },
   {
+    title: "The Twelvefold Way of Non-Sequential Lossless Compression",
+    authors:
+      "T. Ameen ur Rahman*, A. Barbehenn*, X. Chen*, H. Dbouk*, J. Douglas*, Y. Geng*, I. George*, J. Harvill*, S. Jeon*, K. Kansal*, K. Lee*, K. Levick*, B. Li*, Z. Li*, Y. Murthy*, A. Muthuveeru-Subramaniam*, S. Olmez*, M. Tomei*, T. Veeravalli*, X. Wang*, E. Wayman*, F. Wu*, P. Xu*, S. Yan*, H. Zhang*, Y. Zhang*, Y. Zhang*, Y. Zhao*, Sourya Basu, and Lav R. Varshney",
+    venue: "Data Compression Conference (DCC)",
+    year: "2021",
+    href: "https://arxiv.org/abs/2011.04069",
+    note: "* Alphabetical ordering",
+  },
+  {
     title:
       "A Lagrangian Model to Predict Microscallop Motion in non Newtonian Fluids",
     authors: "Yashaswini Murthy and Ravi Banavar",
@@ -99,15 +108,6 @@ export const conferencePublications: Publication[] = [
     year: "2019",
     href: "https://arxiv.org/abs/1811.08289",
     note: "Invited for journal extension",
-  },
-  {
-    title: "The Twelvefold Way of Non-Sequential Lossless Compression",
-    authors:
-      "T. Ameen ur Rahman*, A. Barbehenn*, X. Chen*, H. Dbouk*, J. Douglas*, Y. Geng*, I. George*, J. Harvill*, S. Jeon*, K. Kansal*, K. Lee*, K. Levick*, B. Li*, Z. Li*, Y. Murthy*, A. Muthuveeru-Subramaniam*, S. Olmez*, M. Tomei*, T. Veeravalli*, X. Wang*, E. Wayman*, F. Wu*, P. Xu*, S. Yan*, H. Zhang*, Y. Zhang*, Y. Zhang*, Y. Zhao*, Sourya Basu, and Lav R. Varshney",
-    venue: "Data Compression Conference (DCC)",
-    year: "2021",
-    href: "https://arxiv.org/abs/2011.04069",
-    note: "* Alphabetical ordering",
   },
 ];
 
