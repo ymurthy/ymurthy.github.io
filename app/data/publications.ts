@@ -113,6 +113,13 @@ export const conferencePublications: Publication[] = [
 
 export const workingPapers: Publication[] = [
   {
+    title: "Scalable Robust-Policy Learning under Total-Variation Uncertainty",
+    authors: "Saptarshi Mandal, Yashaswini Murthy, and R. Srikant",
+    venue: "MLxOR Workshop at NeurIPS 2026",
+    year: "2026",
+    note: "Under review",
+  },
+  {
     title:
       "Finite-Time Convergence of Single-Trajectory Chi-Square Robust Q-Learning With Linear Function Approximation",
     authors: "Saptarshi Mandal, Yashaswini Murthy, and R. Srikant",
@@ -152,6 +159,6 @@ export const preprints: Publication[] = [
 export const selectedPublications: Publication[] = [
   conferencePublications[0],
   conferencePublications[1],
-  workingPapers[0],
+  workingPapers[1],
   journalPublications[1],
 ];
