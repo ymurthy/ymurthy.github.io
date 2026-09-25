@@ -14,6 +14,15 @@ type AwardItem = {
 
 const awards: { year: string; items: AwardItem[] }[] = [
   {
+    year: "2026",
+    items: [
+      {
+        emphasis: "CSL PhD Thesis Award",
+        after: ", UIUC.",
+      },
+    ],
+  },
+  {
     year: "2025",
     items: [
       {

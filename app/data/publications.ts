@@ -35,6 +35,21 @@ export const journalPublications: Publication[] = [
 
 export const conferencePublications: Publication[] = [
   {
+    title: "Finite Time Analysis of Risk-Sensitive RL via Noisy Power Iteration",
+    authors:
+      "Waqar Mirza, Yashaswini Murthy, Laixi Shi, Eric Mazumdar, and Adam Wierman",
+    venue: "NeurIPS 2026",
+    year: "2026",
+  },
+  {
+    title:
+      "Finite-Sample Convergence in Networked Average Reward MARL: Decentralization Pitfalls and Entropy Remedies",
+    authors: "Yizhou Zhang*, Yashaswini Murthy*, Laixi Shi, and Adam Wierman",
+    venue: "NeurIPS 2026",
+    year: "2026",
+    note: "* Equal contribution",
+  },
+  {
     title: "On the Gaussian Limit of the Output of IIR Filters",
     authors: "Yashaswini Murthy, Bassam Bamieh, and R. Srikant",
     venue: "IEEE Conference on Decision and Control (CDC)",
@@ -98,29 +113,13 @@ export const conferencePublications: Publication[] = [
 
 export const workingPapers: Publication[] = [
   {
-    title: "Finite Time Analysis of Risk-Sensitive RL via Noisy Power Iteration",
-    authors:
-      "Waqar Mirza, Yashaswini Murthy, Laixi Shi, Eric Mazumdar, and Adam Wierman",
-    venue: "NeurIPS 2026",
-    year: "2026",
-    note: "Under review",
-  },
-  {
-    title:
-      "Finite-Sample Convergence in Networked Average Reward MARL: Decentralization Pitfalls and Entropy Remedies",
-    authors: "Yizhou Zhang*, Yashaswini Murthy*, Laixi Shi, and Adam Wierman",
-    venue: "NeurIPS 2026",
-    year: "2026",
-    note: "Under review · * Equal contribution",
-  },
-  {
     title:
       "Finite-Time Convergence of Single-Trajectory Chi-Square Robust Q-Learning With Linear Function Approximation",
     authors: "Saptarshi Mandal, Yashaswini Murthy, and R. Srikant",
     venue: "IEEE Transactions on Automatic Control (TAC)",
     year: "2026",
     href: "https://arxiv.org/abs/2510.01721",
-    note: "Under submission",
+    note: "Under review",
   },
   {
     title: "Performance of NPG in Countable State-Space Average-Cost RL",
@@ -151,8 +150,8 @@ export const preprints: Publication[] = [
 ];
 
 export const selectedPublications: Publication[] = [
+  conferencePublications[0],
+  conferencePublications[1],
   workingPapers[0],
-  workingPapers[1],
-  workingPapers[2],
   journalPublications[1],
 ];

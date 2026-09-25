@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ProfileLinks } from "./components/profile-links";
 import { PublicationList } from "./components/publication-list";
 import { selectedPublications } from "./data/publications";
@@ -66,16 +67,13 @@ export default function Home() {
           </div>
           <figure className="hero__portrait">
             <div className="hero__portrait-frame">
-              {/* GitHub Pages cannot serve Vinext's runtime image optimizer. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="/assets/images/yashaswini-murthy.jpg"
                 alt="Yashaswini Murthy smiling outdoors"
                 width={1600}
                 height={1329}
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
+                priority
+                sizes="(max-width: 680px) 285px, (max-width: 800px) 260px, 310px"
               />
             </div>
             <ProfileLinks />
@@ -107,6 +105,19 @@ export default function Home() {
             <h2 id="news-title">News &amp; announcements</h2>
           </div>
           <ol className="news-list">
+            <li className="news-item">
+              <div className="news-item__date">September 2026</div>
+              <p>
+                Two of my papers were accepted to NeurIPS 2026: “Finite Time
+                Analysis of Risk-Sensitive RL via Noisy Power Iteration” and
+                “Finite-Sample Convergence in Networked Average Reward MARL:
+                Decentralization Pitfalls and Entropy Remedies.”
+              </p>
+            </li>
+            <li className="news-item">
+              <div className="news-item__date">September 2026</div>
+              <p>I received the CSL PhD Thesis Award (UIUC).</p>
+            </li>
             <li className="news-item">
               <div className="news-item__date">May 2026</div>
               <p>
