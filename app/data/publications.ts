@@ -117,7 +117,6 @@ export const workingPapers: Publication[] = [
     authors: "Saptarshi Mandal, Yashaswini Murthy, and R. Srikant",
     venue: "MLxOR Workshop at NeurIPS 2026",
     year: "2026",
-    note: "Under review",
   },
   {
     title:
