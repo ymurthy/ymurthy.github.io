@@ -23,7 +23,7 @@ const profileLinks = [
   },
   {
     label: "Yashaswini Murthy on Google Scholar",
-    href: "https://scholar.google.com/citations?user=0ryrI64AAAAJ&hl=en",
+    href: "https://scholar.google.com/citations?hl=en&user=8gDPxC4AAAAJ",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="m3 9 9-5 9 5-9 5z" />
